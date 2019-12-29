@@ -1,0 +1,11 @@
+name = "ArmaForces Friendly Tracker - 0.0.0";
+dir = "@armaforces_friendly_tracker";
+author = "ArmaForces";
+url = "https://github.com/ArmaForces/FriendlyTracker/";
+action = "https://armaforces.com/";
+actionName = "Website";
+logo = "\z\afft\addons\main\ui\logo_sm_ca.paa";
+logoOver = "\z\afft\addons\main\ui\logo_sm_ca.paa";
+overviewPicture = "\z\afft\addons\main\ui\logo_sm_ca.paa";
+tooltip = "ArmaForces Friendly Tracker";
+description = "ArmaForces in-house mods developed by community members.";

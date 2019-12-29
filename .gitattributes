@@ -1,0 +1,10 @@
+* text=auto
+*.png binary
+*.jpg binary
+*.paa binary
+
+# Change GitHub language categorisation
+*.cpp linguist-language=SQF
+*.hpp linguist-language=SQF
+*.inc linguist-language=SQF
+include/* linguist-vendored

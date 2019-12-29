@@ -1,0 +1,39 @@
+name = "ArmaForces Friendly Tracker"
+prefix = "afft"
+author = "ArmaForces"
+files = [
+    "LICENSE",
+    "mod.cpp",
+    "README.md"
+]
+
+exclude = ["*.psd", "*.png", "*.tga"]
+
+modname = "armaforces_friendly_tracker"
+keyname = "armaforces_friendly_tracker_{{version}}"
+signame = "armaforces_friendly_tracker_{{version}}"
+
+releasebuild = [
+    "!Set_version",
+    "@zip",
+    "!publish"
+]
+
+# HEMTT >= 0.7 (unreleased)
+#[header_exts]
+#version = "{{git \"id 8\"}}"
+headerexts = [
+    "version={{git \"id 8\"}}"
+]
+
+[scripts.Set_version]
+    steps_windows = [
+        "powershell ./tools/Set-Version.ps1 {{version}} '@armaforces_friendly_tracker'"
+    ]
+    # show_output = true
+
+[scripts.publish]
+    steps_windows = [
+        "powershell ./tools/Publish.ps1 {{version}} 1934142795 '@armaforces_friendly_tracker'"
+    ]
+    show_output = true

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFFT">
+    <Package name="Main">
+        <Key ID="STR_AFFT_Main_Attributes">
+            <English>ArmaForces Attributes</English>
+            <Polish>Atrybuty ArmaForces</Polish>
+        </Key>
+        <Key ID="STR_AFFT_Main_Category">
+            <English>ArmaForces</English>
+        </Key>
+        <Key ID="STR_AFFT_Main_Toolbar">
+            <English>ArmaForces</English>
+        </Key>
+    </Package>
+</Project>

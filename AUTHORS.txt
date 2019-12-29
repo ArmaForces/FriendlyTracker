@@ -1,0 +1,12 @@
+# ArmaForces Friendly Tracker CONTRIBUTOR LIST
+# If you contributed, but are not listed here,
+# contact one of the Core Team members.
+#
+# Feel free to add yourself to this when creating
+# a pull request.
+
+# CORE TEAM
+veteran29
+3Mydlo3
+
+# CONTRIBUTORS
