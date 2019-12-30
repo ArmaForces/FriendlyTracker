@@ -18,7 +18,7 @@
 params ["_unit"];
 
 // Standard marker creation
-private _marker = format["player_%1", getPlayerUID _unit];
+private _marker = format[QGVAR(player_%1), _unit];
 createMarkerLocal [_marker, getPos _unit];
 _marker setMarkerTypeLocal "mil_dot";
 _marker setMarkerSizeLocal [0.5, 0.5];
