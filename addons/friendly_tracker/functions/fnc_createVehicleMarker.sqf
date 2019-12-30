@@ -20,7 +20,7 @@ params ["_vehicle"];
 if (_vehicle isKindOf "Static") exitWith {};
 
 // Create marker name for given vehicle
-private _marker = format ["vehicle_%1", str _vehicle];
+private _marker = format [QGVAR(vehicle_%1), _vehicle];
 
 // Check if such marker exists already, if it does, exit
 if !(getMarkerPos _marker isEqualTo [0, 0, 0]) exitWith {};
