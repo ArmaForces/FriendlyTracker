@@ -6,7 +6,7 @@
 # a pull request.
 
 # CORE TEAM
-veteran29
 3Mydlo3
+veteran29
 
 # CONTRIBUTORS
