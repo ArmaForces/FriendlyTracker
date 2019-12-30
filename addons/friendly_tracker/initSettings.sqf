@@ -60,7 +60,7 @@
 [
     QGVAR(GPS),
     "CHECKBOX",
-    [LSTRING(GPS), LSTRING(GPS_Descrption)],
+    [LSTRING(GPS), LSTRING(GPS_Description)],
     LSTRING(DisplayName),
     false,
     true
