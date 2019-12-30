@@ -24,6 +24,7 @@ if (!GVAR(enabled)) exitWith {
 {
     deleteMarkerLocal (_x select 0);
 } foreach GVAR(markers);
+GVAR(markers) = [];
 
 // If GPS mode is enabled and player (local) does not have GPS/UAV terminal we break and schedule next loop
 if (GVAR(GPS) && {!([player] call FUNC(hasTracker))}) exitWith {
