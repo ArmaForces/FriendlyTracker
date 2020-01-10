@@ -42,7 +42,7 @@ if (GVAR(GPS) && {!([player] call FUNC(hasTracker))}) exitWith {
             [objectParent _x] call FUNC(createVehicleMarker);
         };
     };
-} foreach allPlayers select {side _x isEqualTo side player};
+} foreach (allPlayers select {side _x isEqualTo side player});
 
 // Create marker for tracked vehicles
 {
@@ -61,7 +61,7 @@ switch (true) do {
     case (GVAR(showGroups) isEqualTo SHOW_ALL): {
         {
             [_x] call FUNC(createGroupMarker);
-        } forEach allGroups select {isPlayer leader _x};
+        } forEach (allGroups select {isPlayer leader _x});
     };
 };
 
