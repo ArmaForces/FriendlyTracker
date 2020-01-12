@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 /*
  * Author: 3Mydlo3
  * Function checks if unit has tracking device in equipment
