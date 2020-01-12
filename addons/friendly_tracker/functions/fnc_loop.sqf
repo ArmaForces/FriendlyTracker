@@ -56,12 +56,14 @@ if ([player] call FUNC(isTrackable)) exitWith {
 // Create marker for groups if enabled
 switch (true) do {
     case (GVAR(showGroups) isEqualTo SHOW_PLAYER): {
-        [group player] call FUNC(createGroupMarker);
+        private _group = group player;
+        if (!([_group] call FUNC(isTrackable))) exitWith {};
+        [_group] call FUNC(createGroupMarker);
     };
     case (GVAR(showGroups) isEqualTo SHOW_ALL): {
         {
             [_x] call FUNC(createGroupMarker);
-        } forEach (allGroups select {isPlayer leader _x});
+        } forEach (allGroups select {isPlayer leader _x && {[_x] call FUNC(isTrackable)}});
     };
 };
 
