@@ -27,14 +27,14 @@ if (!GVAR(enabled)) exitWith {
 GVAR(markers) = [];
 
 // If GPS mode is enabled and player (local) does not have GPS/UAV terminal we break and schedule next loop
-if (GVAR(GPS) && {!([player] call FUNC(hasTracker))}) exitWith {
+if ([player] call FUNC(isTrackable)) exitWith {
     [FUNC(loop), [], GVAR(refreshRate)] call CBA_fnc_waitAndExecute;
 };
 
 // Create marker for every player in game
 {
     // If GPS mode is enabled and player does not have GPS/UAV terminal we skip him and go to the next one
-    if (!GVAR(GPS) || {GVAR(GPS) && {[_x] call FUNC(hasTracker)}}) then {
+    if ([_x] call FUNC(isTrackable)) then {
         // Check if player is not in vehicle or vehicle markers are off
         if (isNull objectParent _x || {!GVAR(showVehicle)}) then {
             [_x] call FUNC(createPlayerMarker);
