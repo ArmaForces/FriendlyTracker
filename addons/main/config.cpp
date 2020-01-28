@@ -14,6 +14,4 @@ class CfgPatches {
     };
 };
 
-#include "CfgEden.hpp"
 #include "CfgModuleCategories.hpp"
-#include "DisplayEden.hpp"
