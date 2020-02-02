@@ -27,7 +27,7 @@ if (!GVAR(enabled)) exitWith {
 GVAR(markers) = [];
 
 // If GPS mode is enabled and player (local) does not have GPS/UAV terminal we break and schedule next loop
-if (![player] call FUNC(isTrackable)) exitWith {
+if (!([player] call FUNC(isTrackable))) exitWith {
     [FUNC(loop), [], GVAR(refreshRate)] call CBA_fnc_waitAndExecute;
 };
 
