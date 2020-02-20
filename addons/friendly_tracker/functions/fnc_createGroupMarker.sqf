@@ -18,17 +18,19 @@
 params ["_group"];
 
 private _groupName = groupId _group;
+private _leader = leader _group;
+private _vehicleLeader = vehicle _leader;
 
 // Check if group leader is in vehicle and vehicle markers are enabled
-if (GVAR(showVehicle) && {!(leader _group isEqualTo vehicle leader _group)}) exitWith {
-    private _marker = format [QGVAR(vehicle_%1), vehicle leader _group];
+if (GVAR(showVehicle) && {!(_leader isEqualTo _vehicleLeader)}) exitWith {
+    private _marker = format [QGVAR(vehicle_%1), _vehicleLeader];
     private _markerText = markerText _marker;
-    _marker setMarkerTextLocal (format ["%1 | %2", _markerText, _groupName]);
+    _marker setMarkerTextLocal format ["%1 | %2", _markerText, _groupName];
 };
 
 // Standard marker creation
 private _marker = format [QGVAR(group_%1), _groupName];
-createMarkerLocal [_marker, getPos leader _group];
+createMarkerLocal [_marker, getPos _leader];
 _marker setMarkerTypeLocal ([_group] call FUNC(getGroupMarkerType));
 _marker setMarkerSizeLocal [0.75, 0.75];
 _marker setMarkerTextLocal _groupName;
