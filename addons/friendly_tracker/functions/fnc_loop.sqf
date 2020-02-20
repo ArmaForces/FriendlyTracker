@@ -42,7 +42,7 @@ if (!([player] call FUNC(isTrackable))) exitWith {
             [objectParent _x] call FUNC(createVehicleMarker);
         };
     };
-} foreach (allPlayers select {side _x isEqualTo side player});
+} forEach (allPlayers select {side _x isEqualTo playerSide});
 
 // Create marker for tracked vehicles
 {
