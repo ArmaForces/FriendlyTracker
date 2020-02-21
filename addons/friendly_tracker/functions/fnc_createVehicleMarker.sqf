@@ -48,14 +48,14 @@ switch (true) do {
         _marker setMarkerColorLocal "ColorBlack";
         _marker setMarkerAlphaLocal 0.8;
     };
+    // Special tracked vehicles are khaki
+    case (_vehicle in GVAR(trackedVehicles)): {
+        _marker setMarkerColorLocal "ColorKhaki";
+    };
     // Empty vehicles are grey
     case (crew _vehicle isEqualTo []): {
         _marker setMarkerColorLocal "ColorBlack";
         _marker setMarkerAlphaLocal 0.5;
-    };
-    // Special tracked vehicles are khaki
-    case (_vehicle in GVAR(trackedVehicles)): {
-        _marker setMarkerColorLocal "ColorKhaki";
     };
     // Other vehicles are blue
     case (GVAR(showAllGroups)): {

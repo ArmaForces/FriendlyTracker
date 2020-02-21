@@ -42,7 +42,7 @@ if (!([player] call FUNC(isTrackable))) exitWith {
             [objectParent _x] call FUNC(createVehicleMarker);
         };
     };
-} foreach (allPlayers select {side _x isEqualTo side player});
+} forEach TRACKABLE_UNITS;
 
 // Create marker for tracked vehicles
 {
@@ -63,7 +63,7 @@ switch (true) do {
     case (GVAR(showGroups) isEqualTo SHOW_ALL): {
         {
             [_x] call FUNC(createGroupMarker);
-        } forEach (allGroups select {isPlayer leader _x && {[_x] call FUNC(isTrackable)}});
+        } forEach TRACKABLE_GROUPS;
     };
 };
 
