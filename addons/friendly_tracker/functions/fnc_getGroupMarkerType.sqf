@@ -18,11 +18,11 @@
 params ["_group"];
 
 private _leader = leader _group;
-private _vehicle = objectParent _leader;
+private _vehicle = vehicle _leader;
 private _side = side _leader;
 
 private _prefix = ["b", "o", "n"] select ((["WEST", "EAST", "GUER"] find str _side) max 0);
 
-private _type = ["motor_inf", "inf"] select (_leader == _vehicle);
+private _type = ["motor_inf", "inf"] select (_leader isEqualTo _vehicle);
 
 format ["%1_%2", _prefix, _type];
