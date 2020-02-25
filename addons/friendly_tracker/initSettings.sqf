@@ -13,6 +13,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(showInvisible),
+    "CHECKBOX",
+    [LSTRING(ShowInvisible), LSTRING(ShowInvisible_Description)],
+    LSTRING(DisplayName),
+    false,
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(showAllGroups),
     "CHECKBOX",
     [LSTRING(ShowAllGroups), LSTRING(ShowAllGroups_Description)],
