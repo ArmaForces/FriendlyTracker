@@ -13,6 +13,14 @@
             <English>When enabled it shows positions of friendly units.</English>
             <Polish>Włączenie tej opcji powoduje wskazywanie lokalizacji sojuszniczych jednostek na mapie.</Polish>
         </Key>
+        <Key ID="STR_AFFT_Friendly_Tracker_ShowInvisible">
+            <English>Show invisible units/vehicles</English>
+            <Polish>Pokazuj niewidzialne jednostki/pojazdy</Polish>
+        </Key>
+        <Key ID="STR_AFFT_Friendly_Tracker_ShowInvisible_Description">
+            <English>When disabled, doesn't create marker for units/vehicles that are hidden.</English>
+            <Polish>Wyłączenie tej opcji powoduje, że gracz nie widzi znacznika jednostek i pojazdów, które są ukryte.</Polish>
+        </Key>
         <Key ID="STR_AFFT_Friendly_Tracker_ShowAllGroups">
             <English>Show all groups</English>
             <Polish>Pokazuj wszystkie grupy</Polish>

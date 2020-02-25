@@ -2,7 +2,8 @@
 /*
  * Author: 3Mydlo3
  * Function checks if unit/group/vehicle is trackable.
- * (if can be seen on the map and can see others)
+ * - Is not invisible
+ * - Has tracker (unit or anyone in vehicle)
  *
  * Arguments:
  * 0: The thing that will be checked if it should be trackable <OBJECT/GROUP>
@@ -18,12 +19,15 @@
 
 params ["_object"];
 
-// If GPS mode is disabled all object are trackable.
-if (!GVAR(GPS)) exitWith {true};
-
 if (_object isEqualType grpNull) then {
     _object = leader _object;
 };
+
+// We don't want invisible objects if disabled
+if (!GVAR(showInvisible) && {isObjectHidden _object}) exitWith {false};
+
+// If GPS mode is disabled all object are trackable.
+if (!GVAR(GPS)) exitWith {true};
 
 // If object is vehicle check if anyone inside has tracker
 if (_object isKindOf "AllVehicles") exitWith {
