@@ -32,18 +32,7 @@ if (!([player] call FUNC(canTrack))) exitWith {
 };
 
 // Determine which sides we want to track
-GVAR(trackedSides) = switch (GVAR(showSides)) do {
-    case (SIDES_FRIENDLY): {([playerSide] call BIS_fnc_friendlySides) - [sideFriendly]};
-    case (SIDES_PLAYER): {[playerSide]};
-    case (SIDES_ALL): {[WEST, EAST, INDEPENDENT]};
-};
-
-if (GVAR(showSideCivilian)) then {
-    GVAR(trackedSides) pushBackUnique CIVILIAN;
-} else {
-    if (playerSide isEqualTo CIVILIAN) exitWith {};
-    GVAR(trackedSides) = GVAR(trackedSides) - [CIVILIAN];
-};
+GVAR(trackedSides) = call FUNC(getTrackedSides);
 
 // Create marker for every player in game
 {
