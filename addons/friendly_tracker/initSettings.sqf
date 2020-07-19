@@ -49,6 +49,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(showSideCivilian),
+    "CHECKBOX",
+    [LSTRING(ShowSideCivilian), LSTRING(ShowSideCivilian_Description)],
+    LSTRING(DisplayName),
+    true,
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(showUnconc),
     "CHECKBOX",
     [LSTRING(ShowUnconc), LSTRING(ShowUnconc_Description)],

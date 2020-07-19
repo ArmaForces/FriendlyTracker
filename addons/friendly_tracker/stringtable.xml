@@ -69,6 +69,14 @@
             <English>All sides</English>
             <Polish>Wszystkie strony</Polish>
         </Key>
+        <Key ID="STR_AFFT_Friendly_Tracker_ShowSideCivilian">
+            <English>Show civilian side</English>
+            <Polish>Pokazuj stronę cywilną</Polish>
+        </Key>
+        <Key ID="STR_AFFT_Friendly_Tracker_ShowSideCivilian_Description">
+            <English>If enabled civilian side will be added to tracker.</English>
+            <Polish>Włączenie tej opcji powoduje dodanie strony cywilnej do trackera.</Polish>
+        </Key>
         <Key ID="STR_AFFT_Friendly_Tracker_ShowUnconc">
             <English>Show unconscious</English>
             <Polish>Pokazuj nieprzytomnych</Polish>
