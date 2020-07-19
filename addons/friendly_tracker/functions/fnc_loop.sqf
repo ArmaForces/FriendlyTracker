@@ -31,6 +31,13 @@ if (!([player] call FUNC(canTrack))) exitWith {
     [FUNC(loop), [], GVAR(refreshRate)] call CBA_fnc_waitAndExecute;
 };
 
+// Determine which sides we want to track
+GVAR(trackedSides) = switch (GVAR(showSides)) do {
+    case (SIDES_FRIENDLY): {([playerSide] call BIS_fnc_friendlySides) - [sideFriendly, CIVILIAN]};
+    case (SIDES_PLAYER): {[playerSide]};
+    case (SIDES_ALL): {[WEST, EAST, INDEPENDENT]};
+};
+
 // Create marker for every player in game
 {
     // If player is not trackable we skip him and go to the next one

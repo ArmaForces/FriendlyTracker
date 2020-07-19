@@ -40,6 +40,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(showSides),
+    "LIST",
+    [LSTRING(showSides), LSTRING(showSides_Description)],
+    LSTRING(DisplayName),
+    [[SIDES_FRIENDLY, SIDES_PLAYER, SIDES_ALL], [LSTRING(showSides_Friendly), LSTRING(showSides_Player), LSTRING(showSides_All)], SIDES_FRIENDLY],
+    false
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(showUnconc),
     "CHECKBOX",
     [LSTRING(ShowUnconc), LSTRING(ShowUnconc_Description)],

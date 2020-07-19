@@ -49,6 +49,26 @@
             <English>All groups</English>
             <Polish>Wszystkie grupy</Polish>
         </Key>
+        <Key ID="STR_AFFT_Friendly_Tracker_ShowSides">
+            <English>Show sides</English>
+            <Polish>Pokazuj strony</Polish>
+        </Key>
+        <Key ID="STR_AFFT_Friendly_Tracker_ShowSides_Description">
+            <English>Controls shich sides will be visible on tracker.</English>
+            <Polish>Kontroluje które strony będą widoczne na trackerze.</Polish>
+        </Key>
+        <Key ID="STR_AFFT_Friendly_Tracker_ShowSides_Friendly">
+            <English>Friendly sides</English>
+            <Polish>Sojusznicze strony</Polish>
+        </Key>
+        <Key ID="STR_AFFT_Friendly_Tracker_ShowSides_Player">
+            <English>Only player's side</English>
+            <Polish>Tylko strona gracza</Polish>
+        </Key>
+        <Key ID="STR_AFFT_Friendly_Tracker_ShowSides_All">
+            <English>All sides</English>
+            <Polish>Wszystkie strony</Polish>
+        </Key>
         <Key ID="STR_AFFT_Friendly_Tracker_ShowUnconc">
             <English>Show unconscious</English>
             <Polish>Pokazuj nieprzytomnych</Polish>
