@@ -53,7 +53,7 @@
     "CHECKBOX",
     [LSTRING(ShowSideCivilian), LSTRING(ShowSideCivilian_Description)],
     LSTRING(DisplayName),
-    true,
+    false,
     true
 ] call CBA_fnc_addSetting;
 
