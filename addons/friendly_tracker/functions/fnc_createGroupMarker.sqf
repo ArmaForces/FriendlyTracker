@@ -29,7 +29,7 @@ if (!(_leader isEqualTo _vehicleLeader) && {GVAR(showVehicle)}) exitWith {
 };
 
 // Standard marker creation
-private _marker = format [QGVAR(group_%1), _groupName];
+private _marker = format [QGVAR(group_%1), _group];
 createMarkerLocal [_marker, getPos _leader];
 _marker setMarkerTypeLocal ([_group] call FUNC(getGroupMarkerType));
 _marker setMarkerSizeLocal [0.75, 0.75];
