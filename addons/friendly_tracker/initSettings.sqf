@@ -45,7 +45,7 @@
     [LSTRING(showSides), LSTRING(showSides_Description)],
     LSTRING(DisplayName),
     [[SIDES_FRIENDLY, SIDES_PLAYER, SIDES_ALL], [LSTRING(showSides_Friendly), LSTRING(showSides_Player), LSTRING(showSides_All)], SIDES_FRIENDLY],
-    false
+    true
 ] call CBA_fnc_addSetting;
 
 [
