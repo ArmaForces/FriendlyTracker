@@ -15,11 +15,11 @@
 #include "\z\afft\addons\main\script_macros.hpp"
 
 #ifdef DEBUG_MODE_SHOW_AI
-    #define TRACKABLE_UNITS  (allUnits select {side _x in GVAR(friendlySides)})
-    #define TRACKABLE_GROUPS (allGroups select {side _x in GVAR(friendlySides) && {[_x] call FUNC(isTrackable)}})
+    #define TRACKABLE_UNITS  (allUnits select {side _x in GVAR(trackedSides)})
+    #define TRACKABLE_GROUPS (allGroups select {side _x in GVAR(trackedSides) && {[_x] call FUNC(isTrackable)}})
 #else
-    #define TRACKABLE_UNITS  (allPlayers select {side _x in GVAR(friendlySides)})
-    #define TRACKABLE_GROUPS (allGroups select {isPlayer leader _x && {side _x in GVAR(friendlySides) && {[_x] call FUNC(isTrackable)}}})
+    #define TRACKABLE_UNITS  (allPlayers select {side _x in GVAR(trackedSides)})
+    #define TRACKABLE_GROUPS (allGroups select {isPlayer leader _x && {side _x in GVAR(trackedSides) && {[_x] call FUNC(isTrackable)}}})
 #endif
 
 #define SIDES_FRIENDLY 0
