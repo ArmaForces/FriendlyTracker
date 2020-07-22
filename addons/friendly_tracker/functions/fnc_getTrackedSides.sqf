@@ -19,15 +19,12 @@ params [["_side", playerSide]];
 
 private _trackedSides = switch (GVAR(showSides)) do {
     case (SIDES_FRIENDLY): {([_side] call BIS_fnc_friendlySides) - [sideFriendly]};
-    case (SIDES_PLAYER): {[_side]};
-    case (SIDES_ALL): {[WEST, EAST, INDEPENDENT]};
+    case (SIDES_PLAYER): {[_side, CIVILIAN]};
+    case (SIDES_ALL): {[WEST, EAST, INDEPENDENT, CIVILIAN]};
 };
 
-if (GVAR(showSideCivilian)) then {
-    _trackedSides pushBackUnique CIVILIAN;
-} else {
-    if (_side isEqualTo CIVILIAN) exitWith {};
-    _trackedSides = _trackedSides - [CIVILIAN];
+if (!GVAR(showSideCivilian) && {_side != CIVILIAN}) exitWith {
+    _trackedSides - [CIVILIAN] // return
 };
 
-_trackedSides
+_trackedSides // return
