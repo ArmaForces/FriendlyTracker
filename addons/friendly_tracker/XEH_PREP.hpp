@@ -10,5 +10,6 @@ PREP(getGroupMarkerType);
 PREP(getVehicleMarkerType);
 
 PREP(canTrack);
+PREP(getTrackedSides);
 PREP(hasTracker);
 PREP(isTrackable);

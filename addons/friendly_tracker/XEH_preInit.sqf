@@ -4,6 +4,9 @@ ADDON = false;
 
 #include "initSettings.sqf"
 
+// Friendly sides cache
+GVAR(trackedSides) = [playerSide];
+
 GVAR(running) = false;
 GVAR(markers) = [];
 GVAR(trackedVehicles) = [];
