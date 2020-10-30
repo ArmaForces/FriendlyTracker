@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: 3Mydlo3
+ * Author: veteran29
  * Function checks if vehicle has tracking capabilities
  *
  * Arguments:
