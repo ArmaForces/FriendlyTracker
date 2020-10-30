@@ -29,9 +29,10 @@ if (!GVAR(showInvisible) && {isObjectHidden _object}) exitWith {false};
 // If GPS mode is disabled all object are trackable.
 if (!GVAR(GPS)) exitWith {true};
 
-// If object is vehicle check if anyone inside has tracker
-if (_object isKindOf "AllVehicles") exitWith {
-    (crew _object) findIf {[_x] call FUNC(hasTracker)} != -1
+// If object is Human check if has tracker
+if (_object isKindOf "CAManBase") exitWith {
+    [_object] call FUNC(hasTracker) // return
 };
 
-[_object] call FUNC(hasTracker);
+// If object is vehicle check if crew has tracker
+(crew _object) findIf {[_x] call FUNC(hasTracker)} != -1 // return
