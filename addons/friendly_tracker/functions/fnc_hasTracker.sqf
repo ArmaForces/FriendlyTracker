@@ -17,4 +17,4 @@
 
 params ["_unit"];
 
-((assignedItems _unit findIf {_x isEqualTo "ItemGPS" || {["UavTerminal", _x] call BIS_fnc_inString}}) != -1)
+((assignedItems _unit findIf {_x isEqualTo "ItemGPS" || {"uavterminal" in toLower _x}}) != -1)
