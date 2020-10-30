@@ -109,5 +109,13 @@
             <English>When enabled only units with tracker in equipment will be visible on the map. To see other players you also need a tracker.</English>
             <Polish>Wymagaj trackera by pokazać jednostkę na mapie. By widzieć markery innych graczy również musisz mieć tracker.</Polish>
         </Key>
+        <Key ID="STR_AFFT_Friendly_Tracker_GPSVehicle">
+            <English>Use vehicle GPS as tracker</English>
+            <Polish>Używaj GPS pojazdu jako tracker</Polish>
+        </Key>
+        <Key ID="STR_AFFT_Friendly_Tracker_GPSVehicle_Description">
+            <English>When enabled vehicles with GPS will provide tracking capabilities to its crew.</English>
+            <Polish>Gdy włączone pojazdy z GPS będą dostarczać funkcjonalność trackera swojej załodze.</Polish>
+        </Key>
     </Package>
 </Project>

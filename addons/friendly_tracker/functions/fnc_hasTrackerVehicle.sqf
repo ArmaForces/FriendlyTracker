@@ -17,4 +17,6 @@
 
 params ["_vehicle"];
 
+if (!GVAR(GPSVehicle)) exitWith {false};
+
 getNumber (configOf _vehicle >> "enableGPS") == 1 // return
