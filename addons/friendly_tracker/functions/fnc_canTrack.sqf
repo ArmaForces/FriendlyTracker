@@ -20,4 +20,4 @@ params ["_object"];
 // If GPS mode is disabled all units can track.
 if (!GVAR(GPS)) exitWith {true};
 
-[_object] call FUNC(hasTracker)
+_object call FUNC(hasTracker) || {vehicle _object call FUNC(hasTrackerVehicle)}
