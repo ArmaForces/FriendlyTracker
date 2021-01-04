@@ -30,6 +30,9 @@ headerexts = [
     steps_windows = [
         "powershell ./tools/Set-Version.ps1 {{version}} '@armaforces_friendly_tracker'"
     ]
+    steps_linux = [
+        "sed -i 's/0.0.0/{{version}}/' ./releases/{{version}}/@armaforces_friendly_tracker/mod.cpp"
+    ]
     # show_output = true
 
 [scripts.publish]
