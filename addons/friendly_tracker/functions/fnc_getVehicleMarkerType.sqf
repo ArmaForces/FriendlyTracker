@@ -32,7 +32,7 @@ switch (true) do {
     };
     case (_vehicle isKindOf "Land"): {
         if (_vehicle isKindOf "Tank") exitWith {
-            if (getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "transportSoldier") > 0) then {
+            if (getNumber (configOf _vehicle >> "transportSoldier") > 0) then {
                 _type = "mech_inf";
             } else {
                 _type = "armor";
