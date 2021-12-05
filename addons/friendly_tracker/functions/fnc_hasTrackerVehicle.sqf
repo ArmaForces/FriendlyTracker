@@ -19,4 +19,15 @@ params ["_vehicle"];
 
 if (!GVAR(GPSVehicle)) exitWith {false};
 
-getNumber (configOf _vehicle >> "enableGPS") == 1 // return
+private _vehicleConfig = configOf _vehicle;
+private _vehicleConfigName = configName _vehicleConfig;
+
+private _enabledGps = [GVAR(vehicleGpsCache), _vehicleConfigName, ""] call CBA_fnc_hashGet;
+
+if (_enabledGps isEqualTo "") then {
+    _enabledGps = getNumber (_vehicleConfig >> "enableGPS") == 1;
+    [GVAR(vehicleGpsCache), _vehicleConfigName, _enabledGps] call CBA_fnc_hashSet;
+};
+
+// Return
+_enabledGps
