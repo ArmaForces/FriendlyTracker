@@ -19,10 +19,14 @@ params ["_vehicle"];
 
 if (!GVAR(GPSVehicle)) exitWith {false};
 
+private _enabledGps = _vehicle getVariable [QGVAR(enabledGps), ""];
+
+if (_enabledGps isEqualType true) exitWith {_enabledGps};
+
 private _vehicleConfig = configOf _vehicle;
 private _vehicleConfigName = configName _vehicleConfig;
 
-private _enabledGps = [GVAR(vehicleGpsCache), _vehicleConfigName, ""] call CBA_fnc_hashGet;
+_enabledGps = [GVAR(vehicleGpsCache), _vehicleConfigName, ""] call CBA_fnc_hashGet;
 
 if (_enabledGps isEqualTo "") then {
     _enabledGps = getNumber (_vehicleConfig >> "enableGPS") == 1;
