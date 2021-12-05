@@ -12,4 +12,5 @@ PREP(getVehicleMarkerType);
 PREP(canTrack);
 PREP(getTrackedSides);
 PREP(hasTracker);
+PREP(hasTrackerVehicle);
 PREP(isTrackable);

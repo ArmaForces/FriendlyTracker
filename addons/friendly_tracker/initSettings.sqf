@@ -92,3 +92,12 @@
     false,
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(GPSVehicle),
+    "CHECKBOX",
+    [LSTRING(GPSVehicle), LSTRING(GPSVehicle_Description)],
+    LSTRING(DisplayName),
+    true,
+    true
+] call CBA_fnc_addSetting;

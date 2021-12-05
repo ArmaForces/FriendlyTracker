@@ -14,4 +14,6 @@ GVAR(running) = false;
 GVAR(markers) = [];
 GVAR(trackedVehicles) = [];
 
+GVAR(vehicleGpsCache) = call CBA_fnc_hashCreate;
+
 ADDON = true;
